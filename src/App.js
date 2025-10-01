@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import FileUpload from './components/FileUpload';
+import ThemeToggle from './components/ThemeToggle';
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <main className="main-content">
+          <section className="hero-section">
+            <h1>ATP File Processing</h1>
+            <p>Upload your files for processing</p>
+          </section>
+          <section className="upload-section">
+            <h2>Upload Your File</h2>
+            <FileUpload />
+          </section>
+        </main>
+        <ThemeToggle />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

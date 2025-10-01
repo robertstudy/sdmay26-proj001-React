@@ -1,0 +1,72 @@
+.footer {
+  background-color: var(--hero-background);
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-section h4 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+.footer-bottom p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode specific adjustments */
+body.dark-mode .footer {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+}

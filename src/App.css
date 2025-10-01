@@ -1,38 +1,76 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --focus-color: rgba(0, 123, 255, 0.5);
+  --hero-background: #f8f9fa;
+  --card-background: #ffffff;
+  --logo-filter: none;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --border-color: #404040;
+  --focus-color: rgba(0, 123, 255, 0.7);
+  --hero-background: #2d2d2d;
+  --card-background: #333333;
+  --logo-filter: brightness(0) invert(1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  padding-top: 80px; /* Space for fixed navbar */
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section {
+  background-color: var(--hero-background);
+  padding: 4rem 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.upload-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  font-size: 2rem;
 }

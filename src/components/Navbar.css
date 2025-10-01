@@ -1,0 +1,94 @@
+.navbar {
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-container {
+  width: 90%; /* Increased from max-width: 1200px */
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap */
+}
+
+.logo {
+  height: 45px; /* Slightly larger logo */
+  width: auto;
+  filter: var(--logo-filter);
+  transition: filter 0.3s ease;
+}
+
+.company-name {
+  font-size: 1.7rem; /* Larger font size */
+  font-weight: bold;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 3rem; /* Increased gap between links */
+  margin-left: auto; /* Push links to the right */
+  padding-left: 2rem; /* Add some space from the logo/company name */
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem; /* Slightly larger font size */
+  transition: color 0.3s ease;
+  opacity: 0.9;
+  padding: 0.5rem 1rem; /* Add padding to make clickable area larger */
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  opacity: 1;
+  background-color: var(--hero-background);
+}
+
+/* Dark mode specific styles */
+body.dark-mode .navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo {
+  --logo-filter: brightness(0) invert(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+  
+  .company-name {
+    font-size: 1.4rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
